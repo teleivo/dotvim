@@ -1,3 +1,6 @@
+call pathogen#infect()
+call pathogen#helptags()
+
 " ---------------------------------------------------------------------------------
 " basic options
 " ---------------------------------------------------------------------------------
@@ -10,3 +13,6 @@ set showmode						" always show the mode were in
 
 set cmdheight=2
 
+if has("autocmd")
+	filetype plugin indent on
+endif
