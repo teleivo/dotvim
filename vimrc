@@ -22,6 +22,13 @@ set cmdheight=2
 let mapleader=","
 set timeout timeoutlen=1500
 
+" shortcuts for opening files located in the same directory as the current file
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
 if has("autocmd")
 	filetype plugin indent on
 endif
