@@ -13,6 +13,9 @@ set showmode						" always show the mode were in
 
 set cmdheight=2
 
+let mapleader=","
+set timeout timeoutlen=1500
+
 if has("autocmd")
 	filetype plugin indent on
 endif
