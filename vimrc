@@ -1,7 +1,7 @@
 " On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
 " across (heterogeneous) systems easier.
 if has('win32') || has('win64')
-	set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+    set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
 
 call pathogen#infect()
@@ -13,12 +13,12 @@ call pathogen#helptags()
 colorscheme molokai
 set encoding=utf-8
 set number                          " show line numbers
-set tabstop=4 						" size of a hard tabstop
-set shiftwidth=4 					" size of an "indent"
+set tabstop=4                       " size of a hard tabstop
+set shiftwidth=4                    " size of an "indent"
 set softtabstop=4
 set expandtab
 set showcmd
-set showmode						" always show the mode were in at the bottom
+set showmode                        " always show the mode were in at the bottom
 set cursorline                      " colors the current line differently during insert
 set cmdheight=2
 
@@ -39,10 +39,11 @@ map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
 if has("autocmd")
-	filetype plugin indent on
+    filetype plugin indent on
 endif
 
-inoremap  <Up>     <NOP>            " disable my arrow keys ;(
+" disable my arrow keys ;(
+inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
 inoremap  <Left>   <NOP>
 inoremap  <Right>  <NOP>
@@ -51,25 +52,30 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-nnoremap / /\v                      " automatically insert this before search to change regex behavior
-vnoremap / /\v                      
+" automatically insert this before search to change regex behavior
+nnoremap / /\v
+vnoremap / /\v
 set ignorecase                      " affects case-sensitive searching
 set smartcase
 set gdefault                        " replace all occurances on substitutions
 set incsearch                       " highlight search results
 set showmatch
 set hlsearch
-nnoremap <leader><space> :noh<cr>   " clear search results
-nnoremap <tab> %                    " match bracket pairs when moving with tab
+" clear search results
+nnoremap <leader><space> :noh<cr>
+" match bracket pairs when moving with tab
+nnoremap <tab> %
 vnoremap <tab> %
 
 set wrap                            " to handle long lines
 
-inoremap <F1> <ESC>                 " get rid of help key
+" get rid of help key
+inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>  " quickly open vimrc file in split window
-nnoremap <leader>w <C-w>v<C-w>l     " open and move to new vertical split
-
+" quickly open vimrc file in split window
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>  
+" open and move to new vertical split
+nnoremap <leader>w <C-w>v<C-w>l
 
