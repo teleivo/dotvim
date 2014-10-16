@@ -51,7 +51,9 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
-
+"cursor should move down a single row on the screen
+:nmap j gj
+:nmap k gk
 " automatically insert this before search to change regex behavior
 nnoremap / /\v
 vnoremap / /\v
@@ -78,4 +80,11 @@ vnoremap <F1> <ESC>
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>  
 " open and move to new vertical split
 nnoremap <leader>w <C-w>v<C-w>l
+
+" Shortcut to rapidly toggle set list
+nmap <leader>l :set list!<CR>
+set listchars=tab:»\ ,eol:¬
+"Invisible character colors
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
 
