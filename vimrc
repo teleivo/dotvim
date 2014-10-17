@@ -88,3 +88,6 @@ set listchars=tab:»\ ,eol:¬
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
+" open nerdtree toggle
+map <C-n> :NERDTreeToggle<CR>
+
