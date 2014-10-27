@@ -10,6 +10,9 @@ call pathogen#helptags()
 " ---------------------------------------------------------------------------------
 " basic options
 " ---------------------------------------------------------------------------------
+"set t_Co=256                       "  colors look weird with default color
+"scheme and molokai, white background! but why :()
+let g:airline_theme='luna'
 colorscheme molokai
 set encoding=utf-8
 set number                          " show line numbers
@@ -18,7 +21,7 @@ set shiftwidth=4                    " size of an "indent"
 set softtabstop=4
 set expandtab
 set showcmd
-set showmode                        " always show the mode were in at the bottom
+set noshowmode                      " hide the mode at the bottom, since vim-airline does that now
 set cursorline                      " colors the current line differently during insert
 set cmdheight=2
 
@@ -91,3 +94,5 @@ highlight SpecialKey guifg=#4a4a59
 " open nerdtree toggle
 map <C-n> :NERDTreeToggle<CR>
 
+" start vim-airline by default
+set laststatus=2
