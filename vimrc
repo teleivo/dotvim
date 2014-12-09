@@ -16,10 +16,13 @@ let g:airline_theme='luna'
 colorscheme molokai
 set encoding=utf-8
 set number                          " show line numbers
+
 set tabstop=4                       " size of a hard tabstop
 set shiftwidth=4                    " size of an "indent"
 set softtabstop=4
+set shiftround                      " round indent to multiple of 'shiftwidth'
 set expandtab
+
 set showcmd
 set noshowmode                      " hide the mode at the bottom, since vim-airline does that now
 set cursorline                      " colors the current line differently during insert
