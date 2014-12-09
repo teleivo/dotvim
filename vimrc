@@ -16,6 +16,7 @@ let g:airline_theme='luna'
 colorscheme molokai
 set encoding=utf-8
 set number                          " show line numbers
+set textwidth=79                    " lines longer than 79 columns will be broken
 
 set tabstop=4                       " size of a hard tabstop
 set shiftwidth=4                    " size of an "indent"
