@@ -15,6 +15,8 @@ colorscheme gruvbox
 set background=dark                 "set dark or light mode
 
 let g:airline_theme='gruvbox'
+" display all buffers when one tab is open
+let g:airline#extensions#tabline#enabled = 1
 
 set encoding=utf-8
 set number                          " show line numbers
