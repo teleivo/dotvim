@@ -25,7 +25,6 @@ set shiftround                      " round indent to multiple of 'shiftwidth'
 set expandtab
 
 set showcmd
-set noshowmode                      " hide the mode at the bottom, since vim-airline does that now
 set cursorline                      " colors the current line differently during insert
 set cmdheight=2
 
@@ -100,3 +99,4 @@ map <C-n> :NERDTreeToggle<CR>
 
 " start vim-airline by default
 set laststatus=2
+set noshowmode                      " hide the mode at the bottom, since vim-airline does that now
