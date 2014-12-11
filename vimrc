@@ -10,10 +10,12 @@ call pathogen#helptags()
 " ---------------------------------------------------------------------------------
 " basic options
 " ---------------------------------------------------------------------------------
-"set t_Co=256                       "  colors look weird with default color
-"scheme and molokai, white background! but why :()
-let g:airline_theme='luna'
-colorscheme molokai
+let t_Co=256
+colorscheme gruvbox
+set background=dark                 "set dark or light mode
+
+let g:airline_theme='gruvbox'
+
 set encoding=utf-8
 set number                          " show line numbers
 set textwidth=79                    " lines longer than 79 columns will be broken
