@@ -20,6 +20,16 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
 
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 set encoding=utf-8
 set number                          " show line numbers
 set textwidth=79                    " lines longer than 79 columns will be broken
