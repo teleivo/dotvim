@@ -63,6 +63,8 @@ map <leader>et :tabe %%
 
 if has("autocmd")
     filetype plugin indent on
+    autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+    autocmd Filetype puppet setlocal ts=2 sts=2 sw=2
 endif
 
 " disable my arrow keys ;(
