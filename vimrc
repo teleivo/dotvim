@@ -47,6 +47,7 @@ set cmdheight=2
 
 set modelines=0
 set nocompatible                    " turn off vi compatibilty
+set backspace=indent,eol,start      " backspace did not work in mintty
 
 set wildmenu                        " enables a menu at the bottom
 set wildmode=list:longest,full      " shows list of commands when doing completion in cmd line via tab
