@@ -1,14 +1,20 @@
-Installation:
+# Installation
 
-    git clone https://github.com/teleivo/dotvim.git ~/.vim
+## Clone repo
+```bash
+git clone https://github.com/teleivo/dotvim.git ~/.vim
+```
 
-Create symlinks:
+## Create symlinks
 
-    ln -s ~/.vim/vimrc ~/.vimrc
-    ln -s ~/.vim/gvimrc ~/.gvimrc
+```bash
+ln -s ~/.vim/vimrc ~/.vimrc
+```
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
-    cd ~/.vim
-    git submodule init
-    git submodule update
+## Update git submodules
+```bash
+cd ~/.vim
+git submodule update --init
+```
