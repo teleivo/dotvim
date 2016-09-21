@@ -121,3 +121,39 @@ map <C-n> :NERDTreeToggle<CR>
 " start vim-airline by default
 set laststatus=2
 set noshowmode                      " hide the mode at the bottom, since vim-airline does that now
+
+" in normal mode Space toggles current fold. if not on a fold moves to the
+" right.
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
+""""""""""""""
+" GnuPG Extensions
+""""""""""""""
+" Tell the GnuPG plugin to armor new files.
+let g:GPGPreferArmor=1
+
+" Tell the GnuPG plugin to sign new files.
+let g:GPGPreferSign=1
+
+augroup GnuPGExtra
+    " Set extra file options
+    autocmd BufReadCmd,FileReadCmd *.\(gpg\|asc\|pgp\) call SetGPGOptions()
+    " Automatically close unmodified files after inactivity.
+    autocmd CursorHold *.\(gpg\|asc\|pgp\) quit
+augroup END
+
+function SetGPGOptions()
+    setlocal noswapfile
+    set viminfo=
+    set updatetime=60000
+    set foldmethod=marker
+    set foldlevel=0
+    set foldclose=all
+    set foldopen=insert
+    " make it harder to open folds by accident
+    set foldopen=""
+    " move cursor over word and press 'e' to obfuscate/unobfuscate it
+    "noremap e g?iw
+endfunction
+
