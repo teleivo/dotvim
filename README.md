@@ -1,20 +1,21 @@
 # Installation
 
+## Install Vundle
+
+https://github.com/VundleVim/Vundle.vim
+
 ## Clone repo
 ```bash
 git clone https://github.com/teleivo/dotvim.git ~/.vim
+```
+
+## Install vim plugins
+```bash
+vim +PluginInstall +qall
 ```
 
 ## Create symlinks
 
 ```bash
 ln -s ~/.vim/vimrc ~/.vimrc
-```
-
-Switch to the `~/.vim` directory, and fetch submodules:
-
-## Update git submodules
-```bash
-cd ~/.vim
-git submodule update --init
 ```
