@@ -18,7 +18,9 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'morhetz/gruvbox'
+if v:version > 704
 Plugin 'Valloric/YouCompleteMe'
+endif
 
 call vundle#end()            " required
 filetype plugin indent on    " required
