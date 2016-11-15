@@ -171,7 +171,7 @@ nnoremap <leader>w <C-w>v<C-w>l
 
 " Shortcut to rapidly toggle set list
 nmap <leader>l :set list!<CR>
-set listchars=tab:»\ ,eol:¬
+set listchars=tab:>-,trail:*,eol:¬
 "Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
