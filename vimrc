@@ -18,6 +18,7 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'morhetz/gruvbox'
+Plugin 'jamessan/vim-gnupg'
 if v:version > 704
 Plugin 'Valloric/YouCompleteMe'
 endif
