@@ -37,7 +37,8 @@ endif
 " ---------------------------------------------------------------------------------
 let t_Co=256
 colorscheme gruvbox
-set background=dark                 "set dark or light mode
+set background=dark
+let g:gruvbox_contrast_dark='medium'
 
 " vim-airline
 if !exists('g:airline_symbols')
@@ -47,8 +48,6 @@ endif
 let g:airline_theme='gruvbox'
 " display all buffers when one tab is open
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_left_sep = '▶'
-"let g:airline_right_sep = '◀'
 
 if !exists('g:airline_powerline_fonts')
     let g:airline#extensions#tabline#left_sep = ' '
