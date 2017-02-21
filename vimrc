@@ -84,6 +84,7 @@ let g:UltiSnipsJumpForwardTrigger = '<c-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
 " workaround for https://github.com/SirVer/ultisnips/issues/711
 let g:UltiSnipsSnippetDirectories = [ '~/.vim/my-ultisnips', '~/.vim/bundle/vim-snippets/UltiSnips', 'UltiSnips' ]
+autocmd FileType javascript UltiSnipsAddFiletypes javascript-jasmine
 
 " syntastic settings
 set statusline+=%#warningmsg#
