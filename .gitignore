@@ -1,3 +1,4 @@
 #  history file which maintains all the directories that were modified
 .netrwhist
 bundle/
+.DS_store
