@@ -30,9 +30,13 @@ filetype plugin indent on    " required
 " basic options
 " ---------------------------------------------------------------------------------
 let t_Co=256
-colorscheme gruvbox
+try
+    colorscheme gruvbox
+    let g:gruvbox_contrast_dark='medium'
+catch
+endtry
+
 set background=dark
-let g:gruvbox_contrast_dark='medium'
 
 " vim-airline
 if !exists('g:airline_symbols')
