@@ -22,6 +22,11 @@ Plugin 'jamessan/vim-gnupg'
 if v:version > 704
 Plugin 'Valloric/YouCompleteMe'
 endif
+Plugin 'prettier/vim-prettier'
+Plugin 'fatih/vim-go'
+Plugin 'editorconfig/editorconfig-vim'
+" to ensure editorconfig plays nice with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -223,3 +228,5 @@ function SetGPGOptions()
     "noremap e g?iw
 endfunction
 
+" add go linter to runtime path
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
