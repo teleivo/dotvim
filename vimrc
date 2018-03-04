@@ -116,6 +116,7 @@ set backspace=indent,eol,start      " backspace did not work in mintty
 
 set wildmenu                        " enables a menu at the bottom
 set wildmode=list:longest,full      " shows list of commands when doing completion in cmd line via tab
+set history=200                     " keep history of # ex commands
 set ruler                           " shows ruler at the bottom right
 let mapleader=","
 set timeout timeoutlen=1500
