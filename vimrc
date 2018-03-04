@@ -120,6 +120,7 @@ set history=200                     " keep history of # ex commands
 set ruler                           " shows ruler at the bottom right
 let mapleader=","
 set timeout timeoutlen=1500
+set pastetoggle=<F3>                " toggle 'paste' to disable autoindent on pasting
 
 " shortcuts for opening files located in the same directory as the current file
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
