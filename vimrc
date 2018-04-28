@@ -125,7 +125,6 @@ set cursorline                      " colors the current line differently during
 set cmdheight=2
 
 set modelines=0
-set nocompatible                    " turn off vi compatibilty
 set backspace=indent,eol,start      " backspace did not work in mintty
 
 set wildmenu                        " enables a menu at the bottom
