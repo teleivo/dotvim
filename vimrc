@@ -106,6 +106,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:tf_fmt_autosave = 0
+
 set encoding=utf-8
 set number                          " show line numbers
 set textwidth=79                    " lines longer than 79 columns will be broken
