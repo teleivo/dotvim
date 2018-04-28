@@ -1,6 +1,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+"
+" Plugins
+"
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -24,11 +28,13 @@ Plugin 'Valloric/YouCompleteMe'
 endif
 Plugin 'prettier/vim-prettier'
 Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-hclfmt'
 Plugin 'editorconfig/editorconfig-vim'
 " to ensure editorconfig plays nice with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 
 " ---------------------------------------------------------------------------------
