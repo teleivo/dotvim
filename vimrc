@@ -150,6 +150,12 @@ set hlsearch
 
 au FocusLost * :wa                  " Set vim to save the file on focus out.
 
+if has("autocmd")
+    filetype plugin indent on
+    autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+    autocmd Filetype puppet setlocal ts=2 sts=2 sw=2
+endif
+
 "
 " Key mappings
 "
@@ -160,12 +166,6 @@ map <leader>ew :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
-
-if has("autocmd")
-    filetype plugin indent on
-    autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-    autocmd Filetype puppet setlocal ts=2 sts=2 sw=2
-endif
 
 "cursor should move down a single row on the screen
 :nmap j gj
