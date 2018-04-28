@@ -153,15 +153,6 @@ if has("autocmd")
     autocmd Filetype puppet setlocal ts=2 sts=2 sw=2
 endif
 
-" disable my arrow keys ;(
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
 "cursor should move down a single row on the screen
 :nmap j gj
 :nmap k gk
