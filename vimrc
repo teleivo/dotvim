@@ -175,6 +175,10 @@ nnoremap / /\v
 vnoremap / /\v
 " clear search results
 nnoremap <leader><space> :noh<cr>
+" center on search results when paging through
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
 " match bracket pairs when moving with tab
 nnoremap <tab> %
 vnoremap <tab> %
