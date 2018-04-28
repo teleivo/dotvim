@@ -168,8 +168,8 @@ map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
 "cursor should move down a single row on the screen
-:nmap j gj
-:nmap k gk
+nmap j gj
+nmap k gk
 " automatically insert this before search to change regex behavior
 nnoremap / /\v
 vnoremap / /\v
