@@ -136,6 +136,8 @@ set ruler                           " shows ruler at the bottom right
 set timeout timeoutlen=1500
 set pastetoggle=<F3>                " toggle 'paste' to disable autoindent on pasting
 
+au FocusLost * :wa                  " Set vim to save the file on focus out.
+
 "
 " Key mappings
 "
