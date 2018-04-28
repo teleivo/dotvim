@@ -203,6 +203,12 @@ highlight SpecialKey guifg=#4a4a59
 " open nerdtree toggle
 map <C-n> :NERDTreeToggle<CR>
 
+" Better split switching
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
 " in normal mode Space toggles current fold. if not on a fold moves to the
 " right.
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
