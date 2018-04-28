@@ -37,9 +37,9 @@ call vundle#end()            " required
 
 filetype plugin indent on    " required
 
-" ---------------------------------------------------------------------------------
-" basic options
-" ---------------------------------------------------------------------------------
+"
+" Settings
+"
 let t_Co=256
 try
     colorscheme gruvbox
@@ -109,6 +109,7 @@ let g:syntastic_check_on_wq = 0
 let g:tf_fmt_autosave = 0
 
 set encoding=utf-8
+set noerrorbells                    " no beeps
 set number                          " show line numbers
 set textwidth=79                    " lines longer than 79 columns will be broken
 syntax on                           " syntax highlighting
