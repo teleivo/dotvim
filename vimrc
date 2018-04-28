@@ -195,6 +195,9 @@ nnoremap <leader>vrc <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " quickly save
 nmap <leader>w :w!<cr>
 
+" quickly close quickfix
+nnoremap <leader>a :cclose<CR>
+
 " Shortcut to rapidly toggle set list
 nmap <leader>l :set list!<CR>
 "Invisible character colors
@@ -251,3 +254,13 @@ endfunction
 
 " add go linter to runtime path
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+
+"
+" Fugitive
+"
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gc :Gcommit -v<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gp :Gpush<CR>
+
