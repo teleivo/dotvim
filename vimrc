@@ -185,9 +185,10 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 " quickly open vimrc file in split window
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>  
-" open and move to new vertical split
-nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>vrc <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+" quickly save
+nmap <leader>w :w!<cr>
 
 " Shortcut to rapidly toggle set list
 nmap <leader>l :set list!<CR>
