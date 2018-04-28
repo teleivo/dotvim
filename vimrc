@@ -113,6 +113,10 @@ set noerrorbells                    " no beeps
 set autoread                        " reread changes without asking
 set number                          " show line numbers
 set textwidth=79                    " lines longer than 79 columns will be broken
+set wrap                            " to handle long lines
+set cursorline                      " colors the current line differently during insert
+set listchars=tab:>-,trail:*,eol:¬  " define how whitespaces are shown
+
 syntax on                           " syntax highlighting
 
 set tabstop=4                       " size of a hard tabstop
@@ -121,12 +125,13 @@ set softtabstop=4
 set shiftround                      " round indent to multiple of 'shiftwidth'
 set expandtab
 
-set showcmd
-set cursorline                      " colors the current line differently during insert
-set cmdheight=2
-
 set modelines=0
 set backspace=indent,eol,start      " backspace did not work in mintty
+
+set showcmd
+set cmdheight=2
+set laststatus=2
+set noshowmode                      " hide the mode at the bottom, since vim-airline does that
 
 set wildmenu                        " enables a menu at the bottom
 set wildmode=list:longest,full      " shows list of commands when doing completion in cmd line via tab
@@ -135,6 +140,13 @@ set ruler                           " shows ruler at the bottom right
 
 set timeout timeoutlen=1500
 set pastetoggle=<F3>                " toggle 'paste' to disable autoindent on pasting
+
+set ignorecase                      " search ignoring case...
+set smartcase                       " but not when search pattern has upper case character
+set gdefault                        " replace all occurances on substitutions
+set incsearch                       " highlight search results while typing
+set showmatch
+set hlsearch
 
 au FocusLost * :wa                  " Set vim to save the file on focus out.
 
@@ -161,19 +173,11 @@ endif
 " automatically insert this before search to change regex behavior
 nnoremap / /\v
 vnoremap / /\v
-set ignorecase                      " affects case-sensitive searching
-set smartcase
-set gdefault                        " replace all occurances on substitutions
-set incsearch                       " highlight search results
-set showmatch
-set hlsearch
 " clear search results
 nnoremap <leader><space> :noh<cr>
 " match bracket pairs when moving with tab
 nnoremap <tab> %
 vnoremap <tab> %
-
-set wrap                            " to handle long lines
 
 " get rid of help key
 inoremap <F1> <ESC>
@@ -187,17 +191,12 @@ nnoremap <leader>w <C-w>v<C-w>l
 
 " Shortcut to rapidly toggle set list
 nmap <leader>l :set list!<CR>
-set listchars=tab:>-,trail:*,eol:¬
 "Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
 " open nerdtree toggle
 map <C-n> :NERDTreeToggle<CR>
-
-" start vim-airline by default
-set laststatus=2
-set noshowmode                      " hide the mode at the bottom, since vim-airline does that now
 
 " in normal mode Space toggles current fold. if not on a fold moves to the
 " right.
