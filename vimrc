@@ -132,10 +132,14 @@ set wildmenu                        " enables a menu at the bottom
 set wildmode=list:longest,full      " shows list of commands when doing completion in cmd line via tab
 set history=200                     " keep history of # ex commands
 set ruler                           " shows ruler at the bottom right
-let mapleader=","
+
 set timeout timeoutlen=1500
 set pastetoggle=<F3>                " toggle 'paste' to disable autoindent on pasting
 
+"
+" Key mappings
+"
+let mapleader=","
 " shortcuts for opening files located in the same directory as the current file
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 map <leader>ew :e %%
