@@ -155,6 +155,7 @@ if has("autocmd")
     filetype plugin indent on
     autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
     autocmd Filetype puppet setlocal ts=2 sts=2 sw=2
+    autocmd Filetype go setlocal noexpandtab ts=4 sw=4
 endif
 
 "
@@ -263,4 +264,38 @@ nnoremap <leader>gc :Gcommit -v<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gp :Gpush<CR>
+
+"
+" vim-go
+"
+let g:go_fmt_fail_silently = 0
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_enabled = ['vet', 'golint']
+let g:go_metalinter_autosave = 1
+let g:go_list_type = "quickfix"
+let g:go_autodetect_gopath = 1
+let g:go_auto_sameids = 1
+let g:go_highlight_space_tab_error = 0
+let g:go_highlight_array_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_extra_types = 0
+let g:go_highlight_operators = 0
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+
+au FileType go nmap <leader>r  <Plug>(go-run)
+au FileType go nmap <leader>b  <Plug>(go-build)
+au FileType go nmap <leader>t  <Plug>(go-test)
+au FileType go nmap <leader>tf <Plug>(go-test-func)
+au FileType go nmap <Leader>tc <Plug>(go-coverage-toggle)
+au FileType go nmap <Leader>d  <Plug>(go-doc)
+au FileType go nmap <Leader>i  <Plug>(go-info)
+
+au Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+au Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+au Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+au Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
