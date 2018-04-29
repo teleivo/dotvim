@@ -196,8 +196,12 @@ nnoremap <leader>vrc <C-w><C-v><C-l>:e $MYVIMRC<cr>
 " quickly save
 nmap <leader>w :w!<cr>
 
-" quickly close quickfix
+" quickly close quickfix list
 nnoremap <leader>a :cclose<CR>
+
+" quickly jump between errors in quickfix list
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
 
 " Shortcut to rapidly toggle set list
 nmap <leader>l :set list!<CR>
