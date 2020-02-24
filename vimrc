@@ -21,7 +21,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'morhetz/gruvbox'
 Plug 'jamessan/vim-gnupg'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'prettier/vim-prettier'
 Plug 'fatih/vim-go'
 Plug 'fatih/vim-hclfmt'
