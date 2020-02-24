@@ -1,39 +1,35 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-"
-" Plugins
-"
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'vim-airline/vim-airline'
-Plugin 'rodjek/vim-puppet'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'morhetz/gruvbox'
-Plugin 'jamessan/vim-gnupg'
-if v:version > 704
-Plugin 'Valloric/YouCompleteMe'
+" ============================================================================
+" VIM-PLUG BLOCK {{{
+" ============================================================================
+" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-Plugin 'prettier/vim-prettier'
-Plugin 'fatih/vim-go'
-Plugin 'fatih/vim-hclfmt'
-Plugin 'editorconfig/editorconfig-vim'
+
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'vim-airline/vim-airline'
+Plug 'rodjek/vim-puppet'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'morhetz/gruvbox'
+Plug 'jamessan/vim-gnupg'
+Plug 'Valloric/YouCompleteMe'
+Plug 'prettier/vim-prettier'
+Plug 'fatih/vim-go'
+Plug 'fatih/vim-hclfmt'
+Plug 'editorconfig/editorconfig-vim'
+call plug#end()
+
 " to ensure editorconfig plays nice with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-
-call vundle#end()            " required
 
 filetype plugin indent on    " required
 
