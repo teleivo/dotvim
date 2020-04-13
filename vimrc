@@ -18,7 +18,6 @@ Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
-Plug 'rodjek/vim-puppet'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'Raimondi/delimitMate'
 Plug 'morhetz/gruvbox'
@@ -27,7 +26,6 @@ Plug 'jamessan/vim-gnupg'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'prettier/vim-prettier'
 Plug 'fatih/vim-go'
-Plug 'fatih/vim-hclfmt'
 Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
