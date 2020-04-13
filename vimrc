@@ -16,16 +16,16 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/syntastic'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'Raimondi/delimitMate'
 Plug 'morhetz/gruvbox'
-Plug 'junegunn/goyo.vim'
 Plug 'jamessan/vim-gnupg'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'prettier/vim-prettier'
-Plug 'fatih/vim-go'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'Raimondi/delimitMate'
+Plug 'junegunn/goyo.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'scrooloose/syntastic'
+Plug 'fatih/vim-go'
 call plug#end()
 
 " to ensure editorconfig plays nice with fugitive
