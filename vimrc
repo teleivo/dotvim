@@ -24,6 +24,7 @@ Plug 'rodjek/vim-puppet'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'Raimondi/delimitMate'
 Plug 'morhetz/gruvbox'
+Plug 'junegunn/goyo.vim'
 Plug 'jamessan/vim-gnupg'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'prettier/vim-prettier'
