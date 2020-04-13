@@ -17,7 +17,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
-Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'Raimondi/delimitMate'
 Plug 'morhetz/gruvbox'
@@ -45,44 +44,6 @@ catch
 endtry
 
 set background=dark
-
-" vim-airline
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-let g:airline_theme='gruvbox'
-" display all buffers when one tab is open
-let g:airline#extensions#tabline#enabled = 1
-
-if !exists('g:airline_powerline_fonts')
-    let g:airline#extensions#tabline#left_sep = ' '
-    let g:airline#extensions#tabline#left_alt_sep = '|'
-    let g:airline_left_sep          = '▶'
-    let g:airline_left_alt_sep      = '»'
-    let g:airline_right_sep         = '◀'
-    let g:airline_right_alt_sep     = '«'
-    let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
-    let g:airline#extensions#readonly#symbol   = '⊘'
-    let g:airline#extensions#linecolumn#prefix = '¶'
-    let g:airline#extensions#paste#symbol      = 'ρ'
-    let g:airline_symbols.linenr    = '␊'
-    let g:airline_symbols.branch    = '⎇'
-    let g:airline_symbols.paste     = 'ρ'
-    let g:airline_symbols.paste     = 'Þ'
-    let g:airline_symbols.paste     = '∥'
-    let g:airline_symbols.whitespace = 'Ξ'
-else
-    let g:airline#extensions#tabline#left_sep = ''
-    let g:airline#extensions#tabline#left_alt_sep = '' " powerline symbols
-    let g:airline_left_sep = ''
-    let g:airline_left_alt_sep = ''
-    let g:airline_right_sep = ''
-    let g:airline_right_alt_sep = ''
-    let g:airline_symbols.branch = ''
-    let g:airline_symbols.readonly = ''
-    let g:airline_symbols.linenr = ''
-endif
 
 " syntastic settings
 set statusline+=%#warningmsg#
@@ -120,7 +81,6 @@ set backspace=indent,eol,start      " backspace did not work in mintty
 set showcmd
 set cmdheight=2
 set laststatus=2
-set noshowmode                      " hide the mode at the bottom, since vim-airline does that
 
 set wildmenu                        " enables a menu at the bottom
 set wildmode=list:longest,full      " shows list of commands when doing completion in cmd line via tab
