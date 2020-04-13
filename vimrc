@@ -8,6 +8,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" fzf installed using Homebrew
+" https://github.com/junegunn/fzf/blob/master/README-VIM.md#installation
+set rtp+=/usr/local/opt/fzf
+
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -17,7 +21,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'rodjek/vim-puppet'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'Raimondi/delimitMate'
 Plug 'morhetz/gruvbox'
 Plug 'jamessan/vim-gnupg'
@@ -207,6 +211,8 @@ highlight SpecialKey guifg=#4a4a59
 
 " open nerdtree toggle
 map <C-n> :NERDTreeToggle<CR>
+
+nnoremap <C-p> :<C-u>FZF<CR>
 
 " Better split switching
 map <C-j> <C-W>j
