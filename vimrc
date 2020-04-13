@@ -14,9 +14,9 @@ set rtp+=/usr/local/opt/fzf
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
-Plug 'scrooloose/nerdcommenter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
