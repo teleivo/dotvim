@@ -17,8 +17,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'rodjek/vim-puppet'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -87,14 +85,6 @@ else
     let g:airline_symbols.readonly = ''
     let g:airline_symbols.linenr = ''
 endif
-
-" UltiSnips triggering
-let g:UltiSnipsExpandTrigger = '<c-j>'
-let g:UltiSnipsJumpForwardTrigger = '<c-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
-" workaround for https://github.com/SirVer/ultisnips/issues/711
-let g:UltiSnipsSnippetDirectories = [ '~/.vim/my-ultisnips', '~/.vim/bundle/vim-snippets/UltiSnips', 'UltiSnips' ]
-autocmd FileType javascript UltiSnipsAddFiletypes javascript-jasmine
 
 " syntastic settings
 set statusline+=%#warningmsg#
