@@ -118,7 +118,7 @@ endif
 "
 " Key mappings
 "
-let mapleader=","
+let mapleader=" "
 " shortcuts for opening files located in the same directory as the current file
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 map <leader>ew :e %%
