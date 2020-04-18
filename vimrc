@@ -147,6 +147,9 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+" stay on home keys for ESC
+inoremap jj <ESC>
+
 " quickly open vimrc file in split window
 nnoremap <leader>vrc <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
