@@ -97,6 +97,7 @@ set history=200                     " keep history of # ex commands
 set ruler                           " shows ruler at the bottom right
 
 set timeout timeoutlen=1500
+set clipboard^=unnamed,unnamedplus  " make Vim use the system clipboard on mac/win/linux (also its selection clipboard)
 set pastetoggle=<F3>                " toggle 'paste' to disable autoindent on pasting
 
 set ignorecase                      " search ignoring case...
