@@ -23,8 +23,6 @@ Plug 'prettier/vim-prettier'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'junegunn/goyo.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'scrooloose/syntastic'
 Plug 'fatih/vim-go'
 call plug#end()
 
@@ -53,12 +51,6 @@ function! s:statusline_expr()
   return '[%n] %F %<'.mod.ro.ft.git.sep.pos.'%*'.pct
 endfunction
 let &statusline = s:statusline_expr()
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 3
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 let g:tf_fmt_autosave = 0
 
