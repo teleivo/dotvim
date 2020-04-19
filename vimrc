@@ -36,12 +36,8 @@ filetype plugin indent on    " required
 "
 " Settings
 "
-let t_Co=256
-try
-    colorscheme gruvbox
-    let g:gruvbox_contrast_dark='medium'
-catch
-endtry
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='medium'
 
 set background=dark
 
